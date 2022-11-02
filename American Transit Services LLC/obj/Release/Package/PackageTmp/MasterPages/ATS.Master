@@ -1,0 +1,152 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="ATS.master.vb" Inherits="American_Transit_Services_LLC.ATS" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="shortcut icon" type="image/ico" href="../Images/1_PNG.ico" />
+    <link rel="icon" type="image/ico" href="../Images/1_PNG.ico" />
+    <link rel="apple-touch-icon" type="image/ico" href="../Images/1_PNG.ico" />
+
+    <title>American Transit Services</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!--FontAwsome-->
+    <link href="../Plugin/fontawesom/css/all.css" rel="stylesheet" />
+
+    <!--Datatables-->
+    <link href="../Plugin/Datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    
+    <!--StyleSheet-->
+    <link href="../Css/Master.css" rel="stylesheet" />
+    <link href="../Css/ATS_MasterStyle.css" rel="stylesheet" />
+    <!--Google-->
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs.jquery/3/4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDJoTcSeGRvKUADN5kcNGIEyiVEvFAHrI&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cABC" async defer></script>
+
+    
+
+        <script type="text/javascript" >
+            function preventBack(){window.history.forward();}
+            setTimeout("preventBack()", 0);
+            window.onunload=function(){null};
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+       
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+        <div class="row">
+            <div class="col-2 column" >
+                <div class="row">
+                    <div class="col">
+                        <img src="../Images/Logo.JPG" id="img_logo" class="img" runat="server" />
+                    </div>
+                </div>
+                <br />
+
+                <div class="row line"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="dropdown">
+                
+                            <button class="username nav-link dropdown-toggle rounded-circle" runat="server" id="btn_Username" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <asp:Label ID="lbl_user_info" runat="server" Text="Label"></asp:Label></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <asp:LinkButton ID="ll_account" CssClass="link20 container-fluid form-control" runat="server">My Account</asp:LinkButton>
+                                </li>
+                                <li>
+                                   <asp:LinkButton ID="ll_logout" CssClass="link20 container-fluid form-control" runat="server">Log Out</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row line"></div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_dashboard" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-tachometer-alt"></i> Dashboard</asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_admin" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-user-lock"></i> Administration</asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_client" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-user"></i> Client</asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_proforma" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-file"></i> Proforma</asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_reservation" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-calendar-check"></i> Reservation</asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_invoice" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-file-invoice"></i> Invoice</asp:LinkButton>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <asp:LinkButton ID="ll_reports" CssClass="container-fluid link-menu" runat="server"><i class="fas fa-list-ol"></i> Reports</asp:LinkButton>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+            <div class="col-md-10 column3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                    
+                </asp:ContentPlaceHolder>
+                </div>
+                
+            
+
+        </div>
+       <div class="row">
+           <asp:Label ID="lbl_employe_credentials" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_initials" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_role" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_employe_id" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_employe" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_rrhh" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_finance" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:Label ID="lbl_settings" Visible="false" runat="server" Text="Label"></asp:Label>
+           <asp:GridView ID="grd_user" Visible="false" runat="server"></asp:GridView>
+           <asp:GridView ID="grd_employe" Visible="false" runat="server"></asp:GridView>
+           <asp:GridView ID="grd_autorization" Visible="false" runat="server"></asp:GridView>
+       </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+        <script src="../Plugin/Datatables/js/jquery.dataTables.min.js"></script>
+    </form>
+</body>
+   
+</html>

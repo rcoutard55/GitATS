@@ -1,0 +1,302 @@
+﻿body {
+    background-color:white;
+    font-family:'Bookman Old Style';
+    font-size:small;
+    color:black;
+    overflow-x:hidden;
+}
+.column {
+    width:200px;
+    background-color: steelblue;
+    font-size: medium;
+    color: white;
+    height: 100%;
+    margin-top: 0px;
+    position: fixed;
+    /*z-index: 1;*/
+    /*top: 0;
+    left: 0;*/
+    
+}
+
+.column2 {
+    background-color: white;
+    font-size: medium;
+    color: white;
+   margin-left:250px;
+}
+
+.column3 {
+    background-color: white;
+    font-size: medium;
+    color: black;
+    height: auto;
+    margin-top: 0px;
+    margin-left:200px;
+}
+
+#img_logo {
+    width:100%;
+    margin-top:7px;
+    margin-left:7px;
+}
+
+.line {
+    height:2px;
+    width:100%;
+    background-color:white;
+    margin-left:8px;
+}
+
+.username {
+    color:white;
+    font-weight:bold;
+    font-size:x-large;
+    text-align:center;
+    background-color:transparent;
+    border:none;
+    margin-left:60px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.dropdown-menu {
+    background-color:steelblue;
+    color:white;
+    
+}
+
+.link-menu {
+    color:white;
+    margin-left:10px;
+    background-color:steelblue;
+    font-weight:bold;
+    font-size:smaller;
+}
+
+.link20 {
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+}
+
+.header-text {
+    font-size: xx-large;
+    font-weight: bold;
+    color: steelblue;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.header-text2 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+
+.card-header {
+    background-color:steelblue;
+    color:white;
+    font-weight:bold;
+}
+.add-link{
+    color:steelblue;
+    font-size:x-large;
+    font-weight:bold;
+    margin-left:20px;
+}
+
+.control-link-blue {
+    color: steelblue;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left:20px;
+    margin-right:5px;
+}
+
+.control-link-red {
+    color: darkred;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.close-control {
+    color: darkred;
+    font-size: x-large;
+    font-weight: bold;
+}
+.blue-line {
+    height: 2px;
+    width: 100%;
+    background-color: steelblue;
+    margin-left: 8px;
+}
+
+.card-header-control {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+   
+}
+.comment{
+background-color:lightpink;
+color:darkred;
+border-style:solid;
+border-color:darkred;
+border-width:1px;
+height:auto;
+}
+
+.header-label-header{
+    background-color:steelblue;
+    color:white;
+    font-weight:bold;
+    font-size:medium;
+    margin-left:-15px;
+    width:300px;
+    
+}
+
+.header-label-header2 {
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    
+}
+
+.chart-panel{
+    
+    width:100% !important;
+    height:250px;
+}
+
+.chart-contract {
+    margin-top:75px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.password-change {
+    background-color: darkred;
+    color: white;
+    border-style: solid;
+    border-color: darkred;
+    border-width: 1px;
+    height: auto;
+}
+
+.contract-info {
+    background-color: navy;
+    color: white;
+    border-style: solid;
+    border-color: navy;
+    border-width: 1px;
+    height: auto;
+
+}
+.contract-info2 {
+    background-color: darkgreen;
+    color: white;
+    border-style: solid;
+    border-color: darkgreen;
+    border-width: 1px;
+    height: auto;
+}
+
+.black-line {
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin-left: 8px;
+}
+
+.btn-blue{
+    background-color:steelblue;
+    color:white;
+    font-size:larger;
+    font-weight:bold;
+}
+
+.btn-red {
+    background-color: darkred;;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.control-close2{
+    color:darkred;
+}
+
+.btn1 {
+    background-color: steelblue;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    height:140px;
+}
+
+.btn2 {
+    background-color: steelblue;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    margin-top:-10px;
+}
+
+.cal-calendar{
+    width:100%!important;
+    height:35px;
+}
+
+.link27 {
+    background-color: white;
+    color: steelblue;
+    font-weight: bold;
+    font-size:small;
+}
+
+.row-administration {
+    background-image: url('../Images/Administration.jpg');
+    background-size:100%;
+    margin-top:-25px;
+    height:600px;
+    background-repeat:no-repeat;
+}
+
+.card-administration{
+    background-color:transparent;
+    color:white;
+}
+
+.admin-link{
+    color:white;
+    font-weight:bold;
+}
+
+.row-rrhh {
+    background-image: url('../Images/rrhh2.jpg');
+    background-size: 100%;
+    margin-top: -25px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+
+.row-reports {
+    background-image: url('../Images/Reports2.jpg');
+    background-size: 100%;
+    margin-top: -25px;
+    height: 600px;
+    background-repeat: no-repeat;
+   margin-left:-220px;
+
+}
+
+.row-reports2 {
+  
+    margin-left: -200px;
+}

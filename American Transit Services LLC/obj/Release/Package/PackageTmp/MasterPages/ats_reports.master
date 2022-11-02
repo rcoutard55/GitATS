@@ -1,0 +1,36 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPages/ATS.Master" AutoEventWireup="false" CodeBehind="ats_reports.master.vb" Inherits="American_Transit_Services_LLC.ats_reports" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../Css/Master.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    <label class="header-text">Reports</label>
+                </div>
+                <div class="col-md-3"  style="margin-top:10px">
+                    <asp:DropDownList AutoPostBack="true" ID="ddl_report" CssClass="container-fluid form-control" runat="server">
+                        <asp:ListItem Text="--Select--" Value="--Select--" />
+                        <asp:ListItem Text="Employe" Value="Employe" />
+                        <asp:ListItem Text="Proforma" Value="Proforma" />
+                        <asp:ListItem Text="Sales" Value="Sales" />
+                        <asp:ListItem Text="Transport" Value="Transport" />
+                    </asp:DropDownList>
+                </div>
+            </div>
+            <br />
+            
+            <div class="row blue-line"></div>
+            <br />
+            <div class="row">
+                <div class="col-md-10 column3">
+                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                    
+                </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
